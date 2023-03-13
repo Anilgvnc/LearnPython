@@ -1,4 +1,4 @@
-#print & type elements examinations
+'''#print & type elements examinations
 x = 7.125
 print("x = ", x)
 print(type(x), "\n")
@@ -41,11 +41,16 @@ print(type(fnum))
 
 #import libraries
 import math
+from pickle import FALSE
 number = int(input("Enter a number here: "))
 print("Square root of", number, " is: " , math.sqrt(number))
 print("Power of", number, " is: " , math.pow(number))
 print("sin(PI/2) =", math.sin(math.pi))
 print("Log(e) = ", math.log(math.e))
+
+#or
+from math import pow
+print(pow(8,3))
 
 #invoke library syntax
 dir(math)
@@ -149,3 +154,68 @@ B = math.acos((match.pow(a,2)+math.pow(c,2)-math.pow(b,2))/(2*a*c))
 C = math.acos((match.pow(a,2)+math.pow(b,2)-math.pow(b,2))/(2*a*b))
 
 print("The tree angles are: ", (int) (A*100)/100.0 (int) (B*100)/100.0 (int) (C*100)/100.0 )
+
+#Loops
+for i in range(3):
+    print("Hello", end= " ")
+
+for i in range(2, 6, 2):
+    j = input("enter a nunmber: ")
+    print(j)
+
+for character in "Programing Languages Concept" :
+    print(character, end= " ")
+
+#While loops
+i = 0
+while i < 10:
+    print(i, end = " ")
+    i = i + 1 #i += 1
+
+#list
+list(range(3, 15))
+#=+5
+list(range(3,15,5))
+
+'''
+
+#Application: average of grades
+totalGrades = 0
+students = int(input("Enter here number of students in the class: "))
+for x in range(students):
+    totalGrades += eval(input("Enter ", x, ". students grade here: "))
+
+average = totalGrades / students
+
+print("average of the class is: ", average, ".")
+
+
+#
+print("?" * 3)
+
+for i in range(4):
+    print("*" * (i + 1))
+
+#statistics librariy
+import statistics
+
+#Functions
+print("max: ", max)
+print("min: ", min)
+print("sorting: ",sorted([45, 18, -2, -89], reverse = True))
+
+#Prime number application
+pnum = input("Enter a number here: ")
+isPrime = True
+if pnum == 1:
+    isPrime = True
+elif pnum > 1:
+    for i in range(2, pnum):
+        if(pnum % i ) == 0:
+            isPrime = False
+            break
+
+if isPrime:
+    print(pnum, "is a prime number")
+else:
+    print(pnum, "is not a prime number")
