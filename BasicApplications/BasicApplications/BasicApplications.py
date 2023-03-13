@@ -23,7 +23,9 @@ print("x is", x)
 print(type(x))
 
 #input
-name = input("What is your name?\n Enter your name here: ")
+name = input("What is your name?\n\
+Enter your name here: ")
+# '\' conditional operator
 print("username is: ", name)
 print(type(name))
 
@@ -42,6 +44,8 @@ import math
 number = int(input("Enter a number here: "))
 print("Square root of", number, " is: " , math.sqrt(number))
 print("Power of", number, " is: " , math.pow(number))
+print("sin(PI/2) =", math.sin(math.pi))
+print("Log(e) = ", math.log(math.e))
 
 #invoke library syntax
 dir(math)
@@ -130,3 +134,18 @@ elif grade >=40:
 else:
     print("You failed")
 
+
+#Application: Compute Angle
+x1, y1 = eval(input("Enter x, y coodinates of first angle: "))
+x2, y2 = eval(input("Enter x, y coodinates of second angle: "))
+x3, y3 = eval(input("Enter x, y coodinates of third angle: "))
+
+a = math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))
+b = math.sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3))
+c = math.sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3))
+
+A = math.acos((c*c+b*b-a*a)/(2*b*c))
+B = math.acos((match.pow(a,2)+math.pow(c,2)-math.pow(b,2))/(2*a*c))
+C = math.acos((match.pow(a,2)+math.pow(b,2)-math.pow(b,2))/(2*a*b))
+
+print("The tree angles are: ", (int) (A*100)/100.0 (int) (B*100)/100.0 (int) (C*100)/100.0 )
