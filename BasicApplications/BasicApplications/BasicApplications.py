@@ -1,4 +1,4 @@
-'''#print & type elements examinations
+#print & type elements examinations
 x = 7.125
 print("x = ", x)
 print(type(x), "\n")
@@ -90,7 +90,7 @@ average = (x + y + z) / 3
 print(average)
 
 #seconds to minute application
-second = eval(input("Enter an integer for seconds: "))
+seconds = eval(input("Enter an integer for seconds: "))
 #Get minutes remaining seconds
 
 minutes = seconds // 60
@@ -150,8 +150,8 @@ b = math.sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3))
 c = math.sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3))
 
 A = math.acos((c*c+b*b-a*a)/(2*b*c))
-B = math.acos((match.pow(a,2)+math.pow(c,2)-math.pow(b,2))/(2*a*c))
-C = math.acos((match.pow(a,2)+math.pow(b,2)-math.pow(b,2))/(2*a*b))
+B = math.acos((math.pow(a,2)+math.pow(c,2)-math.pow(b,2))/(2*a*c))
+C = math.acos((math.pow(a,2)+math.pow(b,2)-math.pow(b,2))/(2*a*b))
 
 print("The tree angles are: ", (int) (A*100)/100.0 (int) (B*100)/100.0 (int) (C*100)/100.0 )
 
@@ -177,17 +177,17 @@ list(range(3, 15))
 #=+5
 list(range(3,15,5))
 
-'''
-
 #Application: average of grades
 totalGrades = 0
 students = int(input("Enter here number of students in the class: "))
 for x in range(students):
-    totalGrades += eval(input("Enter ", x, ". students grade here: "))
+    print("Enter ", (x + 1), ". student grades here:")
+    grades = eval(input(" "))
+    totalGrades += grades
 
-average = totalGrades / students
+average = (totalGrades / students)
 
-print("average of the class is: ", average, ".")
+print("average of the class is: ", average)
 
 
 #
@@ -198,6 +198,9 @@ for i in range(4):
 
 #statistics librariy
 import statistics
+
+#invoke statistics library syntax
+dir(statistics)
 
 #Functions
 print("max: ", max)
@@ -219,3 +222,47 @@ if isPrime:
     print(pnum, "is a prime number")
 else:
     print(pnum, "is not a prime number")
+
+
+#EX2: Self-checkout machine
+CENTS_PER_TOONÝE = 200
+CENTS_PER_LOONIE = 100
+CENTS_PER_QUARTERS = 25
+CENTS_PER_DIME = 10
+CENTS_PER_NICKEL = 5
+
+cents = int(input("Enter number of cents: "))
+
+print(cents // CENTS_PER_TOONÝE, "toonies")
+cents = cents % CENTS_PER_TOONÝE
+print(cents // CENTS_PER_LOONIE, "loonies")
+cents = cents % CENTS_PER_LOONIE
+print(cents // CENTS_PER_QUARTERS, "quarters")
+cents = cents % CENTS_PER_QUARTERS
+print(cents // CENTS_PER_DIME, "dime")
+cents = cents % CENTS_PER_DIME
+print(cents // CENTS_PER_NICKEL, "nickel")
+cents = cents % CENTS_PER_NICKEL
+
+#EX3: The length of months
+print("Callender of 2023")
+monthInput = input("Enter the name of month: ")
+
+days = 31
+
+if monthInput == "April" or monthInput == "June" or monthInput == "September" or monthInput == "November":
+    days = 30
+elif monthInput == "February":
+    days = "28 or 29"
+
+print(monthInput, "has", days, "days in it.")
+
+#EX4: triangle application
+side1, side2, side3 = float(input("Enter three side of triangle here: "))
+
+if side1 == side2 != side3 or side1 == side3 != side2:
+    print("It's a isosceles.")
+elif side1 == side2 == side3:
+    print("It's a equilateral.")
+elif side1 != side2 != side3:
+    print("It's a scalene.")
