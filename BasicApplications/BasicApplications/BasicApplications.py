@@ -266,3 +266,51 @@ elif side1 == side2 == side3:
     print("It's a equilateral.")
 elif side1 != side2 != side3:
     print("It's a scalene.")
+
+#EXP5: Rating
+RAISE_FACTOR = 2400
+UNACCEPTABLE = 0
+ACCEPTABLE = 0.4
+MERITORIUS = 0.6
+
+rating = float(input("Enter the rating(0 - 0.4 - 0.6):"))
+
+if rating == UNACCEPTABLE:
+    performance = "UNACCEPTABLE"
+elif rating == ACCEPTABLE:
+    performance = ACCEPTABLE
+elif rating == MERITORIUS:
+    performance = MERITORIUS
+
+if performance == "":
+    print("That is not a valid rating.")
+else:
+    print("Based on that rating, the performance is %s"%performance)
+    print("You will receive a raise of $%.2f"%(rating*RAISE_FACTOR))
+
+#EXP6: Leap Years Application
+year = int(input("Enter year here: "))
+
+if year % 400 == 0:
+    isLeapYear = True
+elif year % 100 != 0:
+    isLeapYear = False
+elif year % 4 == 0:
+    isLeapYear = True
+
+if isLeapYear:
+    print(year, " a leap year.")
+else:
+    print(year, " isn't a leap year")
+
+#EXP7: Multiplication Table
+print("    ", end="")
+for i  in range(1, 11):
+    print("%4d"%i, end = " " )
+print()
+
+for i  in range(1, 11):
+    print("%4d"%i, end = " " )
+    for j in range(1, 11):
+        print("%4d"%(i * j) * 1, end = " " )
+print()
