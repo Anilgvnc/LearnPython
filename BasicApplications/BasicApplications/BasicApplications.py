@@ -40,6 +40,7 @@ print("number is: ", fnum)
 print(type(fnum))
 
 #import libraries
+from errno import EL
 import math
 from pickle import FALSE
 number = int(input("Enter a number here: "))
@@ -314,3 +315,161 @@ for i  in range(1, 11):
     for j in range(1, 11):
         print("%4d"%(i * j) * 1, end = " " )
 print()
+
+#EXP8: Birthday calculater
+day = 0 # birth day to be determined
+
+question1 = "Is your birthday in Set1?\n" + \
+    " 1  3  5  7\n" + \
+    " 9 11 13 15\n" + \
+    "17 19 21 23\n" + \
+    "25 27 29 31" + \
+    "\nEnter 0 for No and 1 for Yes: " 
+
+answer = eval(input(question1))
+
+if answer==1:
+
+    day = day + 1
+
+
+question2 = "Is your birthday in Set2?\n" + \
+    " 2  3  6  7\n" + \
+    "10 11 14 15\n" + \
+    "18 19 22 23\n" + \
+    "26 27 30 31" + \
+    "\nEnter 0 for No and 1 for Yes: " 
+
+answer = eval(input(question2))
+
+if answer==1:
+
+    day = day + 2
+
+question3 = "Is your birthday in Set3?\n" + \
+    " 4  5  6  7\n" + \
+    "12 13 14 15\n" + \
+    "20 21 22 23\n" + \
+    "28 29 30 31" + \
+    "\nEnter 0 for No and 1 for Yes: " 
+
+answer = eval(input(question3))
+
+if answer==1:
+
+     day = day + 4
+     
+question4 = "Is your birthday in Set4?\n" + \
+    " 8  9 10 11\n" + \
+    "12 13 14 15\n" + \
+    "24 25 26 27\n" + \
+    "28 29 30 31" + \
+    "\nEnter 0 for No and 1 for Yes: " 
+
+answer = eval(input(question4))
+
+if answer==1:
+
+     day = day + 8
+     
+question5 = "Is your birthday in Set5?\n" + \
+    "16 17 18 19\n" + \
+    "20 21 22 23\n" + \
+    "24 25 26 27\n" + \
+    "28 29 30 31" + \
+    "\nEnter 0 for No and 1 for Yes: " 
+
+answer = eval(input(question5))
+
+if answer==1:
+
+     day = day + 16
+     
+print("\nYour birthday is "+ str(day) + "!")
+
+#EXP9: Subtract random numbers application
+#random number generate
+import random
+num1 = random.randint(0,9)
+num2 = random.randint(0,9)
+
+#if num1 < num2 swap number1 with num2
+if num2 > num1:
+    num1, num2 = num2, num1
+
+answer = eval(input("What is ", num1, " - ", num2 ))
+result = num1 - num2
+if answer == result:
+    print("Your answer is correct")
+else:
+    print("your answer is wrong! ", num1, " - ", num2, " is: ", result)
+
+#EXP10: Chinese Birth year sign
+birthYear = eval(input("Enter your birth year here: "))
+remaningYear = birthYear % 12
+
+if remaningYear == 0:
+    print("You born in Monkey year.")
+elif remaningYear == 1:
+    print("You born in Rooster year.")
+elif remaningYear == 2:
+    print("You born in Dog year.")
+elif remaningYear == 3:
+    print("You born in Pig year.")
+elif remaningYear == 4:
+    print("You born in Rat year.")
+elif remaningYear == 5:
+    print("You born in Ox year.")
+elif remaningYear == 6:
+    print("You born in Tiger year.")
+elif remaningYear == 7:
+    print("You born in Rabbit year.")
+elif remaningYear == 8:
+    print("You born in Dragon year.")
+elif remaningYear == 9:
+    print("You born in Snake year.")
+elif remaningYear == 10:
+    print("You born in Horse year.")
+elif remaningYear == 11:
+    print("You born in Sheep year.")
+else:
+    print("You enter a invalid year.")
+
+#List in Python
+c = [-31, 56, 5, 69, 215]
+print(c)
+
+print(c[0], c[1], c[2], c[3], c[4])
+print(c[-1], c[-2], c[-3], c[-4], c[-5])
+
+    #Lists are mutable objects: theirs elements can be modified
+s = "hello"
+print(s)
+print(s[4], s[3], s[2], s[1], s[0])
+print(len(s)) #Lenght of list
+    #We can add 2 list 
+b = [96, 45]
+concatenatedList = b + c
+print(concatenatedList)
+
+for i in range(len(concatenatedList)):
+    print(f'{i}: {concatenatedList[i]}')
+
+
+#Tuples in Python
+exampleIntTuple = (10,25,64)
+exampleMixTuple = ("Anil", 1.5, -3, 45)
+
+print(exampleIntTuple)
+print(exampleMixTuple)
+
+print(len(exampleIntTuple))
+print(len(exampleMixTuple))
+
+    #Tuples are inmutable: cant be modified
+    #we can add 2 tuples
+
+#Unpacking
+studentTuple = ('Anil', 'Guvenc', [60, 55, 100])
+studentName, studentSurname, studentGrade = studentTuple
+print(studentName, studentSurname, studentGrade)
