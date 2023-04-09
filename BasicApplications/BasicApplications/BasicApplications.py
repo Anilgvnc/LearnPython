@@ -473,3 +473,106 @@ print(len(exampleMixTuple))
 studentTuple = ('Anil', 'Guvenc', [60, 55, 100])
 studentName, studentSurname, studentGrade = studentTuple
 print(studentName, studentSurname, studentGrade)
+
+#EXP11: Lottery
+import random
+lottery = random.randint(0,99)
+guess = eval(input("Enter your lottery number(pick two digits number)"))
+
+#Gets digits of the lottery number 
+lotteryDigits1 = lottery // 10
+lotteryDigits2 = lottery % 10
+
+#Get the digits of the users number
+guessDigit1 = guess // 10
+guessDigit2 = guess % 10
+
+if guess == lottery:
+    print("Exact match: you win $10000.")
+elif (lotteryDigits1 == guessDigit2 and lotteryDigits2 == guessDigit1):
+    print("Match all digits: you win $3000.")
+elif(lotteryDigits1 == guessDigit1 or lotteryDigits2 == guessDigit2 or lotteryDigits1 == guessDigit2 or lotteryDigits2 == guessDigit1):
+    print("Match one digit: you win $1000.")
+else:
+    print("Sorry no match.")
+
+#EXP12: 
+import random
+#generate a random number to be guessed
+number = random.randint(0,100)
+print("Guess a magic number between 0 - 100")
+guess = -1
+
+while guess != number:
+    
+    guess = eval(input("Enter your guess: "))
+    if guess==number:
+        print("Yes, the generated number is",  number)
+    elif guess > number:
+        print("Your guess is too high")
+    else:
+        print("Your guess is too low")
+
+#Example: Create a primitive bar chart
+numbers = [19,3,15,7,11]
+for index, value in enumerate(numbers):
+    print(f'{index:> 5}{value:>8} {"*" * value}')
+
+colors = ['red', 'orange', 'yellow' ]
+print(list(enumerate(colors)))
+print(tuple(enumerate(colors)))
+for index, value in enumerate(colors):
+    print(f'{index}:    {value}')
+
+
+numbers = [2,3,4,5,7,11,13,17,19]
+print(numbers[6:len(numbers)])
+print(numbers[6:])
+print(numbers[:])
+print(numbers[-1:-10:-1])
+print(numbers[::-1])
+numbers[-1]
+
+numbers = [2,3,4,5,7,11,13,17,19]
+numbers[0:3]
+print(numbers)
+
+#Sorting Numbers
+numbers = [24,3,41,5,7,11,13,17,19]
+numbers.sort()
+print(numbers)
+
+numbers.sort(reverse = True)
+print(numbers)
+
+numbers.index(41)
+
+print(1000 in numbers)
+print(1000 not in numbers)
+
+#Add list element
+colors = ['red', 'orange', 'yellow' ]
+colors.insert(0, 'pink')
+print(colors)
+colors.append('blue')
+print(colors)
+colors.extend(['green', 'gray'])
+print(colors)
+
+#list Comprenhensions
+list2 = [item for item in range(1,6)]
+print(list2)
+
+list3 = [item for item in range(1,6)]
+print(list3)
+list3 = [pow(item,3) for item in range(1,6)]
+print(list3)
+
+#
+colors_lower = ['red', 'orange', 'yellow']
+color_capitals = [item.upper() for item in colors_lower]
+print(color_capitals)
+
+#
+cubes = [(x, x**3) for x in range(1,6)]
+print(cubes)
