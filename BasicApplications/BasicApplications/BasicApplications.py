@@ -43,6 +43,7 @@ print(type(fnum))
 from errno import EL
 import math
 from pickle import FALSE
+from tkinter.font import ROMAN
 number = int(input("Enter a number here: "))
 print("Square root of", number, " is: " , math.sqrt(number))
 print("Power of", number, " is: " , math.pow(number))
@@ -576,3 +577,153 @@ print(color_capitals)
 #
 cubes = [(x, x**3) for x in range(1,6)]
 print(cubes)
+
+#Functions
+age = [5,12,17,18,24,32]
+def myFunc(x):
+    if x <18:
+        return False
+    else:
+        return True
+
+adults = filter(myFunc, age)
+print(type(adults))
+
+for item in adults:
+    print(item)
+
+#Filter
+randomList = [1,'a',0, False, True, '0']
+filteredList = filter(none, randomList)
+for items in filteredList:
+    print(items)
+
+#even or odd
+numbers = [10,3,7,1,9,4,2,8,5,6]
+def is_odd(x):
+    return x % 2 != 0
+
+filteredList = filter(is_odd, numbers)
+
+for items in filteredList:
+    print(items)
+
+#list Comprehensions
+numbers = [10,3,7,1,9,4,2,8,5,6]
+[item for item in numbers if is_odd(item)]
+
+#LAMBDA
+object = lambda x: x % 2 != 0
+print(object(10))
+
+#Multiplication and summation in lambda
+multiplication_object = lambda a,b: a * b
+print(multiplication_object(3,5))
+
+summation_object = lambda a,b,c : a+b+c
+print(summation_object(5,3,9))
+
+#List command
+numbers = [10,3,7,1,9,4,2,8,5,6]
+new_list = filter(lambda x: (x % 2 != 0), numbers)
+print(list(new_list)) #Directly listed array. Don't have to use for loop.
+
+#Map Functions
+def myfunc(n):
+    return len(n)
+
+my_tuple = ('apple', 'banana', 'chery')
+
+result = map(myfunc, my_tuple)
+print(type(result)) #prints type of result object
+print(list(result))
+
+#Combine filter and Map functions
+numbers = [10,3,7,1,9,4,2,8,5,6]
+result = list(map(lambda x: x**3, filter(lambda x: x % 2 != 0, numbers)))
+
+print(result)
+
+#Combine with for loop
+numbers = [10,3,7,1,9,4,2,8,5,6]
+result = [item **3 for item in numbers if item % 2 != 0]
+print(result)
+
+#Create a list with range
+my_list = list(range(1,16))
+  #get just the even numbers from my_list
+is_even = filter(lambda x: (x % 2 == 0), my_list)
+  #use map and filter methods to map just the even numbers to their squares
+result = list(map(lambda x: x**2, is_even))
+
+print(my_list)
+print(is_even)
+print(result)
+
+#Exp: Map a list of three Fahrenheit temperatures 41,32 and 212 to a list of tuples containing Fahrenheit temperatures and their celcius equivalents.
+fahrenheit = (41,32,212)
+result = list(map(lambda x: (x, (x- 32) * (5/9)) , fahrenheit))
+print(result)
+
+#Two dimensional lists
+a = [[77,68,86,73],[96,87,89,81],[70,90,86,81]] #this list generates 3 Rows and 4 columns
+for row in a:
+    for item in row:
+        print(item, end= ' ') #end= ' ' Leaves spaces between variables
+        print()
+
+#Finish first chapter: Lists, tuples, Lambda, filter, map, if/ if else / elif, for / while
+
+#Dictionaries in python
+country_codes = {'Finland' : 'fi', 'South Africa' : 'za', 'Nepal': np}
+print(country_codes)
+print(len(country_codes))
+
+print(country_codes['Finland'])
+print(country_codes['South Africa'])
+print(country_codes['Nepal'])
+
+for item in country_codes.keys():
+    print(item, end= ' ')
+
+for item in country_codes.values():
+    print(item, end= ' ')
+
+print(list(country_codes.keys()))
+print(list(country_codes.values()))
+print(list(country_codes.items()))
+
+roman_numerals = {'I': 1, 'II': 2, 'III': 3, 'IV': 5}
+print(roman_numerals['I'])
+roman_numerals['IV'] = 4 #dictionaries are mutable objects.
+print(roman_numerals)
+
+print(len(roman_numerals))
+print(list(roman_numerals))
+print(list(roman_numerals.keys()))
+print(list(roman_numerals.values()))
+print(list(roman_numerals.items()))
+print()
+
+#adding a new item to your dictionary
+roman_numerals['V'] = 5
+print(roman_numerals)
+print()
+#delete an item from your dictionary
+del roman_numerals['III']
+print(roman_numerals)
+
+print(roman_numerals['V'])
+print(roman_numerals.get('V'))
+
+print('V' in roman_numerals)
+print('III' in roman_numerals)
+
+#EXP:
+months = {'January': 1, 'February': 2, 'March': 3}
+print(len(months))
+print(list(months))
+print(list(months.keys()))
+print(list(months.values()))
+print(list(months.items()))
+print()
