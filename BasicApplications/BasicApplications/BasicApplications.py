@@ -546,7 +546,7 @@ numbers.sort(reverse = True)
 print(numbers)
 
 numbers.index(41)
-
+    #Boolean type
 print(1000 in numbers)
 print(1000 not in numbers)
 
