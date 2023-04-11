@@ -34,7 +34,6 @@ Run the server
 ## Authors
 
 - [@Anilgvnc](https://github.com/Anilgvnc)
-- [@melekari](https://github.com/melekari)
   
 ## Links
 - [@Anilgvnc other links](https://linktr.ee/LordOFDead)
