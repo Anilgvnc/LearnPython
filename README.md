@@ -9,7 +9,7 @@ Learn phyton with basic applications.
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Anilgvnc/LearnPython.git
 ```
 
 Go to the project directory
