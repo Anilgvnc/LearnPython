@@ -12,19 +12,19 @@ Clone the project
   git clone https://link-to-project
 ```
 
-
+Go to the project directory
 
 ```bash
   cd my-project
 ```
 
-
+Install required packages
 
 ```bash
   npm install
 ```
 
-
+Run the server
 
 ```bash
   npm run start
@@ -34,8 +34,12 @@ Clone the project
 ## Authors
 
 - [@Anilgvnc](https://github.com/Anilgvnc)
-
   
+## Links
+- [@Anilgvnc other links](https://linktr.ee/LordOFDead)
+
+
 ![Logo](https://cdn.discordapp.com/attachments/827890118978830397/827890268212035594/LODforestlogo.jpg)
 
+    
     
