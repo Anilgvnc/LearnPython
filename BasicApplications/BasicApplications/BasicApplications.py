@@ -2,19 +2,19 @@
 x = 7.125
 print("x = ", x)
 print(type(x), "\n")
-x*2
+x = x*2
 print("x = ", x)
 print(type(x), "\n")
-x**3
+x = x**3
 print("x = ", x)
 print(type(x), "\n")
-x/4
+x = x/4
 print("x = ", x)
 print(type(x), "\n")
-x//7
+x = x//7
 print("x = ", x)
 print(type(x), "\n")
-x%5
+x = x%5
 print("x = ", x)
 print(type(x), "\n")
 
