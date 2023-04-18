@@ -102,8 +102,8 @@ print(seconds, "seconds is", minutes, "minutes and", remainingSeconds, "seconds"
 
 #Tax amount application(tax = 0.06)
 purchase = eval(input("Enter purchase amount here: "))
-tax = purchase * 0.06 #or -> print(round(tax,2))
-print("Tax is: ", (int)(tax*100/100.0))
+tax = purchase * 0.06 
+print("Tax is: ", (int)(tax*100/100.0))#or-> print(round(tax,2))
 
 #Boolean
 print(7==4)
@@ -594,7 +594,7 @@ for item in adults:
 
 #Filter
 randomList = [1,'a',0, False, True, '0']
-filteredList = filter(none, randomList)
+filteredList = filter(None, randomList)
 for items in filteredList:
     print(items)
 
@@ -675,7 +675,7 @@ for row in a:
 #Finish first chapter: Lists, tuples, Lambda, filter, map, if/ if else / elif, for / while
 
 #Dictionaries in python
-country_codes = {'Finland' : 'fi', 'South Africa' : 'za', 'Nepal': np}
+country_codes = {'Finland' : 'fi', 'South Africa' : 'za', 'Nepal': 'np'}
 print(country_codes)
 print(len(country_codes))
 
